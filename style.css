@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+:root {
+    /* background color */
+    --primary-background-clr: white;
+    --secondary-background-clr: rgb(228, 227, 227);
+
+    /* font color */
+    --primary-heading-clr: rgb(80, 77, 77);
+    --secondary-heading-clr: grey;
+
+    /* font-family */
+    --font-family: 'Bai Jamjuree' , sans-serif;
+
+    /* font-size */
+    --primary-heading-size: 1.8rem;
+    --secondary-heading-size: 1.6rem;
+    --tertiary-heading-size: 1.4rem;
+    --primary-body-size: 1rem;
+
+    /* font-weight */
+    --font-weight-large: 600;
+    --font-weight-medium:400;
+    
+    /* spacing */
+    --spacing-small: 1rem;
+    --spacing-medium: calc(var(--spacing-small) * 2);
+    --spacing-large:  calc(var(--spacing-small) * 3);
+    --spacing-very-large:  calc(var(--spacing-small) * 4);
+}
+
+  /* =====================================================
+  =================MOBILE VIEW=========================
+  ===================================================== */
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0 2em;
+    font-family: var(--font-family);
+    background-image: url(images/bg-header-desktop.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--primary-background-clr);
+    box-sizing: border-box;
+}
+
+/* =======header======= */
+header {
+    text-align: center;
+    margin: var(--spacing-very-large) 0;
+}
+#logo {
+    margin-bottom: var(--spacing-medium);
+}
+h1 {
+    font-size: var(--primary-heading-size);
+    font-weight: var(--font-weight-large);
+    color: var(--primary-heading-clr);
+    margin-bottom: var(--spacing-small);
+}
+p {
+    font-size: var(--primary-body-size);
+    font-weight: var(--secondary-heading-weight);
+    color: var(--secondary-heading-clr);
+    margin-bottom: var(--spacing-medium);
+    line-height: 1.3rem;
+}
+a {
+    font-size: var(--primary-body-size);
+    text-decoration: none;
+}
+.button-container {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.button {
+    color: white;
+    border-radius: 20px;
+    padding: 1em 3em;
+}
+.ios {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 0 3px 0 hsl(171, 73%, 29%);
+}
+.ios:hover {
+    cursor: pointer;
+    background-color: hsl(171, 66%, 44%, 0.8);
+}
+.mac {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 0 3px 0 hsl(233, 66%, 57%);
+}
+.mac:hover {
+    cursor: pointer;
+    background-color: hsl(233, 100%, 69%, 0.8);
+}
+
+/* ===============main============== */
+main {
+    margin-top: var(--spacing-large);
+    text-align: center;
+}
+.overflow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-very-large);
+}
+#desktop {
+    margin-bottom: var(--spacing-medium);
+}
+#tablet {
+    margin-bottom: var(--spacing-medium);
+    width: 100%;
+}
+h2 {
+    font-size: var(--secondary-heading-size);
+    font-weight: var(--font-weight-large);
+    color: var(--primary-heading-clr);
+    margin-bottom: var(--spacing-small);
+}
+h3 {
+    font-size: var(--tertiary-heading-size);
+    font-weight: var(--font-weight-large);
+    color: var(--primary-heading-clr);
+    margin-bottom: var(--spacing-small);
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: var(--spacing-very-large);
+    justify-content: space-between;
+}
+.wrap div {
+    flex: 1;
+}
+.wrap img {
+    margin-bottom: var(--spacing-small);
+}
+.wrap--sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-very-large);
+}
+.wrap--sponsors img {
+    margin-bottom: var(--spacing-large);
+}
+
+/* ========footer=========== */
+footer {
+    margin-top: var(--spacing-very-large);
+    padding-top: var(--spacing-large);
+    background-color: var(--secondary-background-clr);
+    text-align: center;
+    width:  100%;
+    box-shadow: 0 0 0 100vmax var(--secondary-background-clr);
+    clip-path: inset(0 -100vmax);
+}
+footer a {
+    color: var(--primary-heading-clr);
+}
+footer a:hover {
+    color: rgb(22, 221, 221);
+}
+.footer--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer--information {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.footer--information div {
+    padding-bottom: var(--spacing-medium);
+}
+.social--media {
+    width: 10em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-large);
+}
+.social--media a{
+    font-size: var(--secondary-heading-size);
+}
+.attribution {
+    font-size: var(--primary-body-size);
+    text-align: center;
+    margin: 0;
+}
+.attribution a { 
+    font-size: var(--primary-body-size);
+    color: white;
+}
+
+/* ==================================================
+================DESKTOP VIEW======================
+================================================== */
+
+@media (width > 1000px) {
+    body {
+        margin: 0 5em;
+        background-image: url(images/bg-header-desktop.png);
+    }
+    /* ========header======== */
+    .button-container {
+        width: 500px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    /* ========main======== */
+    .overflow {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+    .overflow img {
+        margin-left: calc(var(--spacing-large) * -2);
+    }
+    #desktop,
+    #tablet {
+        width: auto;
+    }
+    .word-wrap {
+        align-self: center;
+        margin-left: var(--spacing-large);
+    }
+    .wrap {
+        flex-direction: row;
+    }
+    .wrap--sponsors {
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+    }
+    /* ========footer======= */
+    .footer--container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer--container img{
+        width: 30%;
+    }
+    .footer--information {
+        width: 39%;
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+    .footer--information div {
+        text-align: start;
+        white-space: nowrap;
+        box-sizing: border-box;
+        /* margin-right: var(--spacing-medium); */
+        width: 33%;
+    }
+    footer a:hover {
+        color: rgb(22, 221, 221);
+    }
+    .social--media {
+        width: 30%;
+        justify-content: space-evenly;
+        margin-top: 0;
+    }
+
+}
